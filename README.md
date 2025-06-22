@@ -1,5 +1,3 @@
-
-```markdown
 # 🧠 Quiz Matemático com Flask
 
 Este é um projeto web simples usando **Python (Flask)** que simula um quiz de matemática com validações em tempo real, desenvolvido para a matéria de Raciocínio Matemático para Computação. Ele abrange operações como raiz quadrada, divisão, logaritmos, potência, Bhaskara, entre outras.
@@ -16,21 +14,6 @@ Este é um projeto web simples usando **Python (Flask)** que simula um quiz de m
 
 ## 📁 Estrutura do Projeto
 
-```
-
-meu-projeto/
-│
-├── app.py                # Arquivo principal Flask
-├── requirements.txt      # Dependências do projeto
-│
-├── static/
-│   └── style.css         # Estilo personalizado
-│
-├── templates/
-│   └── index.html        # Página HTML com as questões
-
-````
-
 ---
 
 ## ✅ Requisitos
@@ -46,7 +29,6 @@ meu-projeto/
    ```bash
    git clone https://github.com/seu-usuario/quiz-matematico-flask.git
    cd quiz-matematico-flask
-````
 
 2. Crie e ative um ambiente virtual:
 
@@ -101,8 +83,5 @@ Este projeto é livre para fins educacionais.
 
 ## 🙋‍♂️ Autor
 
-Feito por Vitor Natal Cordeiro, João Carlos Mezari, Eduardo Blasczak, Lucas Gabriel Alfaro
-
-
-```
+Feito por Vitor Natal Cordeiro
 
