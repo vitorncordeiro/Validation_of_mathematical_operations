@@ -1,0 +1,237 @@
+/* -------------------------------------------------
+   Paleta & variáveis
+-------------------------------------------------- */
+:root {
+  --primaria: #000000;     /* azul-violeta principal */
+  --secundaria: #8a41ea;   /* violeta para gradiente/hover */
+  --fundo: #f4f4f9;        /* quase branco de fundo */
+  --texto: #1A1A1A;        /* texto principal */
+  --sucesso-bg: #3F2B6B;   /* feedback ok */
+  --sucesso-tx: #AA8BFF;
+  --erro-bg: #3F2B6B;      /* feedback erro */
+  --erro-tx: #c62828;
+}
+
+/* -------------------------------------------------
+   Reset leve
+-------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-image: radial-gradient(
+      at 88% 40%,
+      hsla(240, 15%, 9%, 1) 0px,
+      transparent 85%
+    ),
+    radial-gradient(at 70% 1%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+    radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+    radial-gradient(at 0% 64%, rgb(92, 31, 192) 0px, transparent 85%),
+    radial-gradient(at 100% 99%, rgb(163, 25, 149) 0px, transparent 85%);
+  color: var(--texto);
+  line-height: 1.6;
+  padding: 24px 16px;
+  
+}
+
+/* -------------------------------------------------
+   Cabeçalho
+-------------------------------------------------- */
+header {
+  text-align: center;
+  color: white;
+  margin-bottom: 48px;
+  
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  
+}
+
+/* -------------------------------------------------
+   Container principal
+-------------------------------------------------- */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  
+}
+
+/* -------------------------------------------------
+   Blocos de quiz (cards)
+-------------------------------------------------- */
+.quiz-block {
+    
+  background-color: #1A1A1A;
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 01);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+   background-color: hsla(240, 15%, 9%, 1);
+  background-image: radial-gradient(
+      at 88% 40%,
+      hsla(240, 15%, 9%, 1) 0px,
+      transparent 85%
+    ),
+    radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+    radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+    radial-gradient(at 0% 64%, hsla(263, 93%, 56%, 1) 0px, transparent 85%),
+    radial-gradient(at 41% 94%, hsla(284, 100%, 84%, 1) 0px, transparent 85%),
+    radial-gradient(at 100% 99%, hsla(306, 100%, 57%, 1) 0px, transparent 85%);
+  border-radius: 1rem;
+  
+  animation: blobAnimation 10s ease-in-out infinite;
+}
+@keyframes blobAnimation {
+  0% {
+    background-image: radial-gradient(
+        at 88% 40%,
+        hsla(240, 15%, 9%, 1) 0px,
+        transparent 85%
+      ),
+      radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 0% 64%, hsla(263, 93%, 56%, 1) 0px, transparent 85%),
+      radial-gradient(at 41% 94%, hsla(284, 100%, 84%, 1) 0px, transparent 85%),
+      radial-gradient(at 100% 99%, hsla(306, 100%, 57%, 1) 0px, transparent 85%);
+  }
+
+  50% {
+    background-image: radial-gradient(
+        at 90% 43%,
+        hsla(240, 15%, 9%, 1) 0px,
+        transparent 85%
+      ),
+      radial-gradient(at 52% 28%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 10% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 3% 60%, hsla(263, 93%, 56%, 1) 0px, transparent 85%),
+      radial-gradient(at 38% 90%, hsla(284, 100%, 84%, 1) 0px, transparent 85%),
+      radial-gradient(at 97% 95%, hsla(306, 100%, 57%, 1) 0px, transparent 85%);
+  }
+
+  100% {
+    background-image: radial-gradient(
+        at 88% 40%,
+        hsla(240, 15%, 9%, 1) 0px,
+        transparent 85%
+      ),
+      radial-gradient(at 49% 30%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 14% 26%, hsla(240, 15%, 9%, 1) 0px, transparent 85%),
+      radial-gradient(at 0% 64%, hsla(263, 93%, 56%, 1) 0px, transparent 85%),
+      radial-gradient(at 41% 94%, hsla(284, 100%, 84%, 1) 0px, transparent 85%),
+      radial-gradient(at 100% 99%, hsla(306, 100%, 57%, 1) 0px, transparent 85%);
+  }
+}
+
+.quiz-block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.09);
+}
+
+.quiz-block h2 {
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.quiz-block input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: black;
+  margin-bottom: 14px;
+  border: 1px solid #1A1A1A;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  color: white;
+}
+
+.quiz-block input[type="number"]:focus {
+  outline: none;
+  border-color: var(--primaria);
+  box-shadow: 0 0 0 2px rgba(91, 124, 240, 0.2);
+}
+
+.quiz-block button {
+  display: inline-block;
+  background: var(--primaria);
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.quiz-block button:hover {
+  background: var(--secundaria);
+  transform: translateY(-2px);
+}
+
+.quiz-block button:active {
+  transform: translateY(0);
+}
+
+/* -------------------------------------------------
+   Feedback de resultado / erro
+-------------------------------------------------- */
+.feedback {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 18px 20px;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.feedback.ok {
+  background: linear-gradient();
+  color: var(--sucesso-tx);
+}
+
+.feedback.erro {
+  
+  color: var(--erro-tx);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* -------------------------------------------------
+   Rodapé
+-------------------------------------------------- */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #777777;
+}
+
+/* -------------------------------------------------
+   Responsividade extra
+-------------------------------------------------- */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+
+  .quiz-block {
+    padding: 20px 16px;
+  }
+
+  .quiz-block h2 {
+    font-size: 1.15rem;
+  }
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz de Matemática</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>Quiz de Restrições Matemáticas</h1>
+  </header>
+
+  <main>
+
+    <!-- Questão 1 -->
+    <form method="POST" class="quiz-block">
+      <h2>Questão 1: Raiz Quadrada</h2>
+      <input type="hidden" name="questao" value="quest1">
+      <input type="number" name="num" placeholder="Digite um número">
+      <button type="submit">Calcular</button>
+      {% if questao == 'quest1' %}
+        {% if resultado %}
+          <div class="feedback ok">{{ resultado }}</div>
+        {% elif erro %}
+          <div class="feedback erro">{{ erro }}</div>
+        {% endif %}
+      {% endif %}
+    </form>
+
+    <!-- Questão 2 -->
+    <form method="POST" class="quiz-block">
+      <h2>Questão 2: Divisão</h2>
+      <input type="hidden" name="questao" value="quest2">
+      <input type="number" name="num" placeholder="Numerador">
+      <input type="number" name="den" placeholder="Denominador">
+      <button type="submit">Dividir</button>
+      {% if questao == 'quest2' %}
+        {% if resultado %}
+          <div class="feedback ok">{{ resultado }}</div>
+        {% elif erro %}
+          <div class="feedback erro">{{ erro }}</div>
+        {% endif %}
+      {% endif %}
+    </form>
+
+    <!-- Questão 3 -->
+    <form method="POST" class="quiz-block">
+      <h2>Questão 3: Logaritmo (base 10)</h2>
+      <input type="hidden" name="questao" value="quest3">
+      <input type="number" name="log" placeholder="Número positivo">
+      <button type="submit">Calcular</button>
+      {% if questao == 'quest3' %}
+        {% if resultado %}
+          <div class="feedback ok">{{ resultado }}</div>
+        {% elif erro %}
+          <div class="feedback erro">{{ erro }}</div>
+        {% endif %}
+      {% endif %}
+    </form>
+
+    <!-- Questão 4 -->
+    <form method="POST" class="quiz-block">
+      <h2>Questão 4: Log com base personalizada</h2>
+      <input type="hidden" name="questao" value="quest4">
+      <input type="number" name="valor" placeholder="Valor">
+      <input type="number" name="base" placeholder="Base">
+      <button type="submit">Calcular</button>
+      {% if questao == 'quest4' %}
+        {% if resultado %}
+          <div class="feedback ok">{{ resultado }}</div>
+        {% elif erro %}
+          <div class="feedback erro">{{ erro }}</div>
+        {% endif %}
+      {% endif %}
+    </form>
+
+    <!-- Questão 5 -->
+    <form method="POST" class="quiz-block">
+      <h2>Questão 5: Raiz Cúbica</h2>
+      <input type="hidden" name="questao" value="quest5">
+      <input type="number" name="num" placeholder="Número">
+      <button type="submit">Calcular</button>
+      {% if questao == 'quest5' %}
+        {% if resultado %}
+          <div class="feedback ok">{{ resultado }}</div>
+        {% elif erro %}
+          <div class="feedback erro">{{ erro }}</div>
+        {% endif %}
+      {% endif %}
+    </form>
+
+    <!-- Questão 6 -->
+    <form method="POST" class="quiz-block">
+    <h2>Questão 6: Fatorial de número</h2>
+    <input type="hidden" name="questao" value="quest6">
+    <input type="number" name="n" placeholder="Número inteiro ≥ 0">
+    <button type="submit">Calcular</button>
+    {% if questao == 'quest6' %}
+      {% if resultado %}
+        <div class="feedback ok">{{ resultado }}</div>
+      {% elif erro %}
+        <div class="feedback erro">{{ erro }}</div>
+      {% endif %}
+    {% endif %}
+</form>
+
+    <!-- Questão 7 -->
+    <form method="POST" class="quiz-block">
+      <h2>Questão 7: Módulo de raiz</h2>
+      <input type="hidden" name="questao" value="quest7">
+      <input type="number" name="x" placeholder="Número">
+      <button type="submit">Calcular</button>
+      {% if questao == 'quest7' %}
+        {% if resultado %}
+          <div class="feedback ok">{{ resultado }}</div>
+        {% elif erro %}
+          <div class="feedback erro">{{ erro }}</div>
+        {% endif %}
+      {% endif %}
+    </form>
+
+    <!-- Questão 8 -->
+    <form method="POST" class="quiz-block">
+  <h2>Questão 8: Potência com expoente fracionário</h2>
+  <input type="hidden" name="questao" value="quest8">
+  <input type="number" name="base" placeholder="Base ≥ 0">
+  <input type="number" step="any" name="expoente" placeholder="Expoente (pode ser decimal)">
+  <button type="submit">Calcular</button>
+  {% if questao == 'quest8' %}
+    {% if resultado %}
+      <div class="feedback ok">{{ resultado }}</div>
+    {% elif erro %}
+      <div class="feedback erro">{{ erro }}</div>
+    {% endif %}
+  {% endif %}
+</form>
+
+    <!-- Questão 9 -->
+    <form method="POST" class="quiz-block">
+      <h2>Questão 9: Raiz quarta (índice par)</h2>
+      <input type="hidden" name="questao" value="quest9">
+      <input type="number" name="num" placeholder="Número">
+      <button type="submit">Calcular</button>
+      {% if questao == 'quest9' %}
+        {% if resultado %}
+          <div class="feedback ok">{{ resultado }}</div>
+        {% elif erro %}
+          <div class="feedback erro">{{ erro }}</div>
+        {% endif %}
+      {% endif %}
+    </form>
+
+    <!-- Questão 10 -->
+    <form method="POST" class="quiz-block">
+        <h2>Questão 10: Bhaskara (Equação do 2º grau)</h2>
+        <input type="hidden" name="questao" value="quest10">
+        <input type="number" name="a" step="any" placeholder="Coeficiente a">
+        <input type="number" name="b" step="any" placeholder="Coeficiente b">
+        <input type="number" name="c" step="any" placeholder="Coeficiente c">
+        <button type="submit">Calcular</button>
+        {% if questao == 'quest10' %}
+          {% if resultado %}
+            <div class="feedback ok">{{ resultado }}</div>
+          {% elif erro %}
+            <div class="feedback erro">{{ erro }}</div>
+          {% endif %}
+        {% endif %}
+    </form>
+
+  </main>
+
+  <footer>
+    &copy; 2025 - Quiz Matemático
+  </footer>
+</body>
+</html>
